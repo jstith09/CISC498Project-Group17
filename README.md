@@ -12,6 +12,8 @@
   - Projection Type -
  
 ### Cell Detector
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/celldetector.jpg" width="250" height="250">
+
   - Threshold -
   - Slice -
   - Size Filter
@@ -19,6 +21,8 @@
 
 ## Windows
 ### Custom Roi Manager
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/celldetector.jpg" width="250" height="250">
+
   - Min/Max Cell Diameter:
   - Update Cells:
   - Multi Measure:
@@ -27,9 +31,13 @@
   - Grid Suggestions:
   - Create Grid
 ### Image Window
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/celldetector.jpg" width="250" height="250">
 ### Menu
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/celldetector.jpg" width="250" height="250">
 ### Results
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/celldetector.jpg" width="250" height="250">
 ### Roi Manager
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/celldetector.jpg" width="250" height="250">
 
 ## Credits
 
