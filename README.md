@@ -1,10 +1,12 @@
 # CalciumSignal
-***Calcium Signal*** is a plugin for ImageJ for Calcium Signal 
+***Calcium Signal*** is a plugin for ImageJ that allows you to detect and analyze calcium cells.
 
 ## Install
 
 ## Startup
 ### PoorMan3DReg
+<img src="https://github.com/jstith09/calcium/blob/main/poorman.jpg" width="250" height="200">
+
   - Transformation -
   - Z Slices -
   - Projection Type -
@@ -31,6 +33,6 @@
 
 ## Credits
 
-Matt Searfass, Cj Spagnolia, Nick Costley, Luke Halko, Jaden Stith
+Matt Searfass, CJ Spagnolia, Nick Costley, Luke Halko, Jaden Stith
 
 
