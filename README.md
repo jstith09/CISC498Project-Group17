@@ -16,8 +16,14 @@ Otherwise, upgrade your Python installation.***
 ### PoorMan3DReg
 <img src="https://github.com/jstith09/calcium/blob/main/poorman.jpg" width="200" height="150">
 
-  - ***Transformation:*** Rigid Body (Default)
-    - Translation, Scaled Rotation, Affine
+  - ***Transformation:*** 
+    - Rigid Body
+      - Default, Translation + Rotation
+    - Translation
+    - Scaled Rotation
+      - Translation + Rotation + Scaling
+    - Affine
+      - Translation + Rotation + Scaling + Skewing
   - ***Z Slices:*** 600 (Default) select number of slices (images) you would like from video
   - ***Projection Type:*** Average Intensity (Default)
     - Max Intensity, Sum Slices
@@ -51,9 +57,9 @@ Otherwise, upgrade your Python installation.***
 
   - ***Min/Max Cell Diameter:*** Enter values to change what size cells are circled by ROI
   - ***Update Cells:*** Use to update ROI after selecting RC 1/2/3 STD
-  - ***Multi Measure:*** ............
+  - ***Multi Measure:*** Uses the built in ImageJ Multimeasure command to take two ore more slices and take the Area, Min, and Max of all of them then store the result as one measurement.
   - ***Outlier Analysis:*** Displays an outlier analysis chart
-  - ***RC 1/2/3 STD:*** Automatically enters 3 different standard deviations for min/max diameter values
+  - ***RC 1/2/3 STD:*** Automatically enters 1/2/3 different standard deviations for min/max diameter values
   - ***Grid Suggestions:*** Gives suggested values for 'Create Grid'
   - ***Create Grid:*** Enter values from 'Grid Suggestions' to create grid on image
   - ***Undo [Cntrl + Shift + E]:*** Undo Add/Delete of ROI
@@ -64,15 +70,23 @@ Otherwise, upgrade your Python installation.***
 ### ROI Manager
 <img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/roimanager.jpg" width="150" height="200">
 
-  - ***Add:***
-  - ***Update:***
-  - ***Delete:***
-  - ***Rename:***
-  - ***Measure:***
-  - ***Deselect:***
-  - ***Properties:***
-  - ***Flatten:***
-  - ***More>>:***
+  - ***Add:*** When a part of the image is selected, this will add the specific pixels selected to the list. If no part of the image is selected, will return an error.
+  - ***Update:*** With an item in the list selected, allows the user to change the size of selected pixels or move the selection. Changes will not be saved unless the update button is clicked a second time after changes were made.
+  - ***Delete:*** Deletes the selected item from the list, if nothing is selected, will prompt the user if they wish to delete the entire list.
+  - ***Rename:*** Prompts the user to rename the selected item in the list.
+  - ***Measure:*** Upon clicking, brings up a new "Results" window, stating the number, mean, minimum, and maximum of the original selection on the image.
+***IMAGE***
+  - ***Deselect:*** Deselects the current selection in the group, clicking it while nothing is selected will do nothing.
+  - ***Properties:*** Opens up a new tab of the current selection, giving ways to edit the selection
+  - - ***Name/Range*** Shows the name and allows the user to change it
+  - - ***Position*** 
+  - - ***Group*** 
+  - - ***Stroke/Fill color*** Changes the color of the lines/fill of the selection block on the image.
+  - - ***Width*** Changes the stroke width of the selection box.
+  - - ***List coordinates*** Lists the coordinates
+***IMAGE***
+  - ***Flatten:*** Creates a new RGB image that has the overlay rendered as pixel data.
+  - ***More>>:*** ETC.
 
 ## Credits
 
