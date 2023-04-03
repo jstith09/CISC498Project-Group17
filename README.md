@@ -75,15 +75,16 @@ Otherwise, upgrade your Python installation.***
   - ***Delete:*** Deletes the selected item from the list, if nothing is selected, will prompt the user if they wish to delete the entire list.
   - ***Rename:*** Prompts the user to rename the selected item in the list.
   - ***Measure:*** Upon clicking, brings up a new "Results" window, stating the number, mean, minimum, and maximum of the original selection on the image.
-***IMAGE***
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/bc6c2b810fab817679cd3362378b3d71.png" width="150" height="150">
+
   - ***Deselect:*** Deselects the current selection in the group, clicking it while nothing is selected will do nothing.
   - ***Properties:*** Opens up a new tab of the current selection, giving ways to edit the selection
-  - - ***Name/Range*** Shows the name and allows the user to change it
-  - - ***Position*** 
-  - - ***Group*** 
-  - - ***Stroke/Fill color*** Changes the color of the lines/fill of the selection block on the image.
-  - - ***Width*** Changes the stroke width of the selection box.
-  - - ***List coordinates*** Lists the coordinates
+    - ***Name/Range*** Shows the name and allows the user to change it
+    - ***Position*** 
+    - ***Group*** 
+    - ***Stroke/Fill color*** Changes the color of the lines/fill of the selection block on the image.
+    - ***Width*** Changes the stroke width of the selection box.
+    - ***List coordinates*** Lists the coordinates
 ***IMAGE***
   - ***Flatten:*** Creates a new RGB image that has the overlay rendered as pixel data.
   - ***More>>:*** ETC.
