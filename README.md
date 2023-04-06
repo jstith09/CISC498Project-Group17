@@ -15,6 +15,8 @@ Otherwise, upgrade your Python installation.***
 ## Startup & Usage
 After launching Fiji, navigate to Plugins -> Calcium Signal -> Run Calcium Signal....
 
+Running Calcium Signal without an image uploaded to Fiji will prevent it from starting.
+
 Allow a few moments for the image registration and edge detection to complete. Then, make corrections as needed in the ROI Manager dialogue.
 
 After running multi-measure, the peak analysis phase will begin. You will find the peak analysis outputs in Fiji.app/plugins/CalciumSignal/pythonscript/cell_data.
