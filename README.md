@@ -80,6 +80,8 @@ After running multi-measure, the peak analysis phase will begin. You will find t
 
 ### Results Table
 <img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/resultstable.jpg" width="350" height="150">
+  - Allows for saving and editing of the results of the slices
+  - Contains different measurements and labels depending on the operations used
 
 ### ROI Manager
 <img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/roimanager.jpg" width="150" height="200">
