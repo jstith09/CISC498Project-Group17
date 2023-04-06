@@ -12,21 +12,33 @@ The target platform for this project is Windows 10. We have made it available fo
 `pip install matplotlib==3.4.3`
 Otherwise, upgrade your Python installation.***
 
-## Startup
+## Startup & Usage
+After launching Fiji, navigate to Plugins -> Calcium Signal -> Run Calcium Signal....
+
+Allow a few moments for the image registration and edge detection to complete. Then, make corrections as needed in the ROI Manager dialogue.
+
+After running multi-measure, the peak analysis phase will begin. You will find the peak analysis outputs in Fiji.app/plugins/CalciumSignal/pythonscript/cell_data.
+
 ### PoorMan3DReg
 <img src="https://github.com/jstith09/calcium/blob/main/poorman.jpg" width="200" height="150">
 
   - ***Transformation:*** 
-    - Rigid Body
-      - Default, Translation + Rotation
-    - Translation
-    - Scaled Rotation
-      - Translation + Rotation + Scaling
-    - Affine
-      - Translation + Rotation + Scaling + Skewing
+    - Choose a different selection to pick how the image will be changed
+      - Rigid Body
+        - Default, Translation + Rotation
+      - Translation
+      - Scaled Rotation
+        - Translation + Rotation + Scaling
+      - Affine
+        - Translation + Rotation + Scaling + Skewing
   - ***Z Slices:*** 600 (Default) select number of slices (images) you would like from video
-  - ***Projection Type:*** Average Intensity (Default)
-    - Max Intensity, Sum Slices
+  - ***Projection Type:***
+    - Average Intensity (Default)
+      - Uses an average of the values of the voxels
+    - Max Intensity
+      - Uses the maximum value of the voxels
+    - Sum Slices
+      - Averages between the individual slices of voxels
  
 ### Cell Detector
 <img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/celldetector.jpg" width="200" height="200">
@@ -85,7 +97,6 @@ Otherwise, upgrade your Python installation.***
     - ***Stroke/Fill color*** Changes the color of the lines/fill of the selection block on the image.
     - ***Width*** Changes the stroke width of the selection box.
     - ***List coordinates*** Lists the coordinates
-***IMAGE***
   - ***Flatten:*** Creates a new RGB image that has the overlay rendered as pixel data.
   - ***More>>:*** ETC.
 
