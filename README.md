@@ -2,6 +2,8 @@
 ***Calcium Signal*** is a plugin for ImageJ that allows you to detect and analyze calcium cells.
 
 ## Install
+***!!!!NEEDS UPDATING!!!!***
+
 The target platform for this project is Windows 10. We have made it available for MacOS and Linux as well, but extra steps may have to be performed to get things working.
 1. If necessary, download [Python 3](https://www.python.org/downloads/) for your system. Python 3.9.7 or newer is ideal. Ensure that Python has been added to PATH (there should be an option to do this during the installation process). The plugin will make use of the "python" and "python3" commands on your system.
 2. If you are a Windows user, please install [Microsoft Visual C++](https://visualstudio.microsoft.com/visual-cpp-build-tools/) 14.0 or higher (if you don't already have it on your system). Choose Desktop Environment with C++. You may be required to restart the computer after this step.
@@ -26,7 +28,7 @@ After running multi-measure, the peak analysis phase will begin. You will find t
 
   - ***Transformation:*** 
     - Choose a different selection to pick how the image will be changed
-      - Rigid Body
+      - Rigid Body(Default)
         - Default, Translation + Rotation
       - Translation
       - Scaled Rotation
@@ -61,8 +63,6 @@ After running multi-measure, the peak analysis phase will begin. You will find t
   - Select the ROI by clicking on them
   - Selected ROI will appear in Roi Manager where you are able to add/delete/rename them
 
-### Menu
-<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/celldetector.jpg" width="200" height="200">
 
 ***NEED TO IMPLEMENT/UPDATE PICTURE***
 
@@ -94,8 +94,8 @@ After running multi-measure, the peak analysis phase will begin. You will find t
   - ***Deselect:*** Deselects the current selection in the group, clicking it while nothing is selected will do nothing.
   - ***Properties:*** Opens up a new tab of the current selection, giving ways to edit the selection
     - ***Name/Range*** Shows the name and allows the user to change it
-    - ***Position*** 
-    - ***Group*** 
+    - ***Position*** Gives the position of the current selection or group
+    - ***Group*** Changes what group the selection is in
     - ***Stroke/Fill color*** Changes the color of the lines/fill of the selection block on the image.
     - ***Width*** Changes the stroke width of the selection box.
     - ***List coordinates*** Lists the coordinates
