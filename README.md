@@ -107,6 +107,8 @@ After running multi-measure, the peak analysis phase will begin. You will find t
 
 ## Credits
 
+***PoorMan3DReg***
+
 ***Matt Searfass, CJ Spagnolia, Nick Costley, Luke Halko, Jaden Stith ..........***
 
 
