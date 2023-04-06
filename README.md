@@ -10,10 +10,6 @@ The target platform for this project is Windows 10. We have made it available fo
 3. If you are a Linux or MacOS user, ensure that pip is installed as your package manager for Python. You may also have to run `sudo apt-get install python3-tk` or `sudo apt-get install python-tk` before running the installation script (on a Mac, those commands are `brew install python-tk` or `brew install python3-tk`).
 4. Download the zip file, unzip it inside the *Fiji.app* directory, and run "CalciumSignal Installer.py" from inside the unzipped folder. The script will create the *CalciumSignal* folder within the *plugins* folder. This is where the files used by the program will go.
 
-***NOTE: if you experience problems during the Peak Analysis phase of the project, type the following in a command prompt to downgrade the Matplotlib version, which may fix the problem after restarting the plugin:
-`pip install matplotlib==3.4.3`
-Otherwise, upgrade your Python installation.***
-
 ## Startup & Usage
 After launching Fiji, navigate to Plugins -> Calcium Signal -> Run Calcium Signal....
 
