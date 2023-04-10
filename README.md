@@ -16,7 +16,8 @@ Running Calcium Signal without an image uploaded to Fiji will prevent it from st
 Allow a few moments for the image registration and edge detection to complete. Then, make corrections as needed in the ROI Manager dialogue.
 
 After running multi-measure, the peak analysis phase will begin. You will find the peak analysis outputs in Fiji.app/plugins/CalciumSignal/pythonscript/cell_data.
-<img src="https://github.com/jstith09/calcium/blob/main/welcome.png" width="200" height="150">
+
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/welcome.png" width="200" height="150">
 
 ### PoorMan3DReg
 <img src="https://github.com/jstith09/calcium/blob/main/poorman.jpg" width="200" height="150">
