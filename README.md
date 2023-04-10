@@ -20,7 +20,7 @@ After running multi-measure, the peak analysis phase will begin. You will find t
 <img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/welcome.png" width="200" height="150">
 
 ### PoorMan3DReg
-<img src="https://github.com/jstith09/calcium/blob/main/poorman.jpg" width="200" height="150">
+<img src="https://github.com/jstith09/calcium/blob/main/poorman.jpg" width="300" height="150">
 
   - ***Transformation:*** 
     - Choose a different selection to pick how the image will be changed
