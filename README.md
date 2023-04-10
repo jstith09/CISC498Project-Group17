@@ -17,10 +17,10 @@ Allow a few moments for the image registration and edge detection to complete. T
 
 After running multi-measure, the peak analysis phase will begin. You will find the peak analysis outputs in Fiji.app/plugins/CalciumSignal/pythonscript/cell_data.
 
-<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/welcome.png" width="200" height="150">
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/welcome.png" width="350" height="150">
 
 ### PoorMan3DReg
-<img src="https://github.com/jstith09/calcium/blob/main/poorman.jpg" width="400" height="150">
+<img src="https://github.com/jstith09/calcium/blob/main/poorman.jpg" width="200" height="150">
 
   - ***Transformation:*** 
     - Choose a different selection to pick how the image will be changed
