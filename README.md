@@ -72,6 +72,7 @@ After running multi-measure, the peak analysis phase will begin. You will find t
   - ***RC 1/2/3 STD:*** Automatically enters 1/2/3 different standard deviations for min/max diameter values
   - ***Grid Suggestions:*** Gives suggested values for 'Create Grid'
   - ***Create Grid:*** Enter values from 'Grid Suggestions' to create grid on image
+  - ***Generate Graphs*** Uses ROI values to generate graphs from the data
   - ***Undo [Cntrl + Shift + E]:*** Undo Add/Delete of ROI
 
 ### Results Table
