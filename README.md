@@ -104,6 +104,16 @@ After running multi-measure, the peak analysis phase will begin. You will find t
 
 ## Credits
 
-***Matt Searfass, CJ Spagnolia, Nick Costley, Luke Halko, Jaden Stith ..........***
+***Plugins:***
+
+GroupedZProjector written by ***Charlie Holly***
+
+PoorMan3DReg written by ***Michael Liebling [link](http://www.its.caltech.edu/~liebling/)***
+
+TurboReg written by ***Philippe Thevenaz [link](http://bigwww.epfl.ch/)***
+
+***Contributers:***
+
+***Matt Searfass, CJ Spagnolia, Nick Costley, Luke Halko, Jaden Stith, Emily Oldham, Sean McMann, Gia Bugieda, Akshat Katoch, Emma Adelmann, Sohan Gadiraju, Jonathan Zhang***
 
 
