@@ -9,7 +9,7 @@ The target platform for this project is Windows 10. We have made it available fo
 3. Move or copy the **CalciumSignal.jar** file into the folder 
 
 ## Startup & Usage
-After launching Fiji, navigate to Plugins -> Calcium Signal -> Run Calcium Signal....
+After launching Fiji, navigate to File -> Open, and open image of choice. Then navigate to Plugins -> Calcium Signal -> Run Calcium Signal....
 
 Running Calcium Signal without an image uploaded to Fiji will prevent it from starting.
 
