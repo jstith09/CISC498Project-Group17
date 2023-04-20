@@ -1,121 +1,139 @@
-ImageJ2 is a new version of [ImageJ](http://imagej.net/) seeking to strengthen
-both the software and its community. Internally, it is a total redesign of
-ImageJ, but it is backwards compatible with ImageJ 1.x via a "legacy layer" and
-features a user interface closely modeled after the original.
+# Calcium Signal
+***Calcium Signal*** is a plugin for ImageJ that allows you to detect and analyze calcium cells.
 
-Under the hood, ImageJ2 completely isolates the image processing logic from the
-graphical user interface (UI), allowing ImageJ2 commands to be used in many
-contexts, including headless in the cloud or on a server such as
-[OMERO](http://openmicroscopy.org/site/support/omero4), or from within another
-application such as [KNIME](http://knime.org/),
-[Icy](http://icy.bioimageanalysis.org/) or
-[CellProfiler](http://cellprofiler.org/) (a Python application).
+## Install
 
-ImageJ2 has an N-dimensional data model driven by the powerful
-[ImgLib2](http://imglib2.net/) library, which supports image data expressed in
-an extensible set of numeric and non-numeric types, and accessed from an
-extensible set of data sources. ImageJ2 is driven by a state-of-the-art,
-collaborative development process, including version control, unit testing,
-automated builds via a continuous integration system, a bug tracker and more.
+The target platform for this project is Windows 10. We have made it available for MacOS and Linux as well, but extra steps may have to be performed to get things working.
+1. From the **release** folder on the github, download **CalciumSignal.jar**
+2. Inside of the Fiji.app folder, navigate to plugins
+3. Move or copy the **CalciumSignal.jar** file into the folder 
 
-We are collaborating closely with related projects including
-[Fiji](http://fiji.sc/), [SCIFIO](http://scif.io/) and
-[OME](http://openmicroscopy.org/), and are striving to deliver a coherent
-software stack reusable throughout the life sciences community and beyond. For
-more details, see the [SciJava web site](http://scijava.org/).
-
-ImageJ2 is currently in the "beta" stage, meaning the code is not finished. It
-is being released for early community feedback and testing. Comments, questions
-and bug reports are much appreciated!
-
-To maintain ImageJ's continuity of development, we have modeled the application
-after ImageJ v1.x as much as is reasonable. However, please be aware that
-ImageJ2 is essentially a total rewrite of ImageJ from the ground up. It
-provides backward compatibility with older versions of ImageJ by bundling the
-latest v1.x code and translating between "legacy" and "modern" image
-structures.
-
-For more details on the project, see the [ImageJ web site](http://imagej.net/).
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/installation.gif" width="750" height="200">
 
 
-LICENSING
----------
+## Startup & Usage
+After launching Fiji, navigate to File -> Open, and open image of choice. Then navigate to Plugins -> Calcium Signal -> Run Calcium Signal....
 
-ImageJ2 is distributed under a
-[Simplified BSD License](http://en.wikipedia.org/wiki/BSD_licenses);
-for the full text of the license, see
-[LICENSE.txt](https://github.com/imagej/imagej/blob/master/LICENSE.txt).
+Running Calcium Signal without an image uploaded to Fiji will prevent it from starting.
 
-For the list of developers and contributors, see
-[pom.xml](https://github.com/imagej/imagej/blob/master/pom.xml).
+Allow a few moments for the image registration and edge detection to complete. Then, make corrections as needed in the ROI Manager dialogue.
 
+After running multi-measure, the peak analysis phase will begin. You will find the peak analysis outputs in Fiji.app/plugins/CalciumSignal/pythonscript/cell_data.
 
-IMAGEJ AS A LIBRARY
--------------------
+### sMenu
 
-This repository is the master ImageJ application, which brings together all of
-ImageJ under the artifact
-[net.imagej:imagej](http://maven.imagej.net/index.html#nexus-search;gav~net.imagej~imagej~~~~kw,versionexpand).
-It is the easiest entry point if you are looking to use ImageJ as a library from
-your own software. E.g., in your Maven `pom.xml`:
+<img src="https://github.com/jstith09/calcium/blob/main/menu.png" width="150" height="250">
 
-```
-<parent>
-  <groupId>net.imagej</groupId>
-  <artifactId>pom-imagej</artifactId>
-  <version>2.35</version>
-</parent>
-...
-<dependency>
-  <groupId>net.imagej</groupId>
-  <artifactId>imagej</artifactId>
-</dependency>
-```
+  - ***Make A Copy:***
+    - Creates a new smaller image of the current selection and opens it. If nothing is selected, opens up the image to make a selection
+  - ***Registration:*** 
+    - Opens PoorMan3DReg to transform the stack for use, 
 
-We recommend inheriting from the
-[pom-imagej](https://github.com/imagej/pom-imagej) parent, although it is not
-required. (If you do not, you will need to include the `<version>` of ImageJ in
-your `<dependency>` declaration.)
+### PoorMan3DReg
+<img src="https://github.com/jstith09/calcium/blob/main/poorman.jpg" width="200" height="150">
 
+  - ***Transformation:*** 
+    - Choose a different selection to pick how the image will be changed
+      - Rigid Body(Default)
+        - Default, Translation + Rotation
+      - Translation
+      - Scaled Rotation
+        - Translation + Rotation + Scaling
+      - Affine
+        - Translation + Rotation + Scaling + Skewing
+  - ***Z Slices:*** 600 (Default) select number of slices (images) you would like from video
+  - ***Projection Type:***
+    - Average Intensity (Default)
+      - Uses an average of the values of the voxels
+    - Max Intensity
+      - Uses the maximum value of the voxels
+    - Sum Slices
+      - Averages between the individual slices of voxels
+  - **Credits:**
+    - Displays the credits before opening the cell detector
+ 
+### Cell Detection
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/celldetection.png" width="200" height="200">
 
-DEPENDENCIES
-------------
+  - ***Threshold Setting:***
 
-This component depends on other, lower level components, each of which lives in
-its own repository:
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/celldetector.jpg" width="200" height="200">
 
-* [ImageJ Common](https://github.com/imagej/imagej-common)
-* [ImageJ Legacy](https://github.com/imagej/imagej-legacy)
-* [ImageJ OPS](https://github.com/imagej/imagej-ops)
-* [ImageJ Updater](https://github.com/imagej/imagej-updater)
-* [ImgLib2](https://github.com/imglib/imglib)
-* [SCIFIO](https://github.com/scifio/scifio)
-* [SciJava Common](https://github.com/scijava/scijava-common)
+    - ***Threshold:*** Automatically will set to a number. Adjust so that the red is covering the most green that you would like detected in the image window
+    - ***Slice:*** Set to 1 (Default)
+    - ***Size Filter:*** Min: 10 Max: 262144 (Default)
+      - Min and Max size of circles drawn. Can be left as is.
+    - ***Exclude objects on edges:*** Checked (Default)
 
-It also includes uses various "plugin" components at runtime:
+  - ***Custom RoiManager:***
+  - ***ROI Manager:***
+  - ***Save ROI set as...:***
+  - ***Apply ROI to video:***
+## Windows
 
-* [Imagej Plugins: Commands](https://github.com/imagej/imagej-plugins-commands)
-* [Imagej Plugins: Tools](https://github.com/imagej/imagej-plugins-tools)
-* [Imagej Plugins: Uploader: SSH](https://github.com/imagej/imagej-plugins-uploader-ssh)
-* [Imagej Plugins: Uploader: WebDAV](https://github.com/imagej/imagej-plugins-uploader-webdav)
-* [SciJava Plugins: Platforms](https://github.com/scijava/scijava-plugins-platforms)
-* [SciJava Plugins: Text: Markdown](https://github.com/scijava/scijava-plugins-text-markdown)
-* [SciJava Plugins: Text: Plain](https://github.com/scijava/scijava-plugins-text-plain)
-* [Scripting: Beanshell](https://github.com/scijava/scripting-beanshell)
-* [Scripting: Clojure](https://github.com/scijava/scripting-clojure)
-* [Scripting: Java](https://github.com/scijava/scripting-java)
-* [Scripting: JavaScript](https://github.com/scijava/scripting-javascript)
-* [Scripting: JRuby](https://github.com/scijava/scripting-jruby)
-* [Scripting: Jython](https://github.com/scijava/scripting-jython)
+### Image Window
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/calciumwindow.jpg" width="200" height="200">
 
-See the [pom.xml](pom.xml) for a complete list of dependencies.
+***DISPLAYS WINDOW WITH THE IMAGE YOU OPENED***
+  - Detected cells are circled in yellow (ROI)
+  - Select the ROI by clicking on them
+  - Selected ROI will appear in Roi Manager where you are able to add/delete/rename them
 
 
-BUGS
-----
+***NEED TO IMPLEMENT/UPDATE PICTURE***
 
-For a list of known issues, see the
-[issue tracking system](http://trac.imagej.net/report/1).
+### Custom Roi Manager
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/customroimanager.jpg">
 
-Please report any bugs by following the [instructions
-online](http://imagej.net/Bugs).
+  - ***Min/Max Cell Diameter:*** Enter values to change what size cells are circled by ROI
+  - ***Update Cells:*** Use to update ROI after selecting RC 1/2/3 STD
+  - ***Multi Measure:*** Uses the built in ImageJ Multimeasure command to take two ore more slices and take the Area, Min, and Max of all of them then store the result as one measurement.
+  - ***Outlier Analysis:*** Displays an outlier analysis chart
+  - ***RC 1/2/3 STD:*** Automatically enters 1/2/3 different standard deviations for min/max diameter values
+  - ***Grid Suggestions:*** Gives suggested values for 'Create Grid'
+  - ***Create Grid:*** Enter values from 'Grid Suggestions' to create grid on image
+  - ***Generate Graphs*** Uses ROI values to generate graphs from the data
+  - ***Undo [Cntrl + Shift + E]:*** Undo Add/Delete of ROI
+
+### Results Table
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/resultstable.jpg" width="350" height="150">
+
+  - Allows for saving and editing of the results of the slices
+  - Contains different measurements and labels depending on the operations used
+
+### ROI Manager
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/roimanager.jpg" width="150" height="200">
+
+  - ***Add:*** When a part of the image is selected, this will add the specific pixels selected to the list. If no part of the image is selected, will return an error.
+  - ***Update:*** With an item in the list selected, allows the user to change the size of selected pixels or move the selection. Changes will not be saved unless the update button is clicked a second time after changes were made.
+  - ***Delete:*** Deletes the selected item from the list, if nothing is selected, will prompt the user if they wish to delete the entire list.
+  - ***Rename:*** Prompts the user to rename the selected item in the list.
+  - ***Measure:*** Upon clicking, brings up a new "Results" window, stating the number, mean, minimum, and maximum of the original selection on the image.
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/bc6c2b810fab817679cd3362378b3d71.png" width="150" height="150">
+
+  - ***Deselect:*** Deselects the current selection in the group, clicking it while nothing is selected will do nothing.
+  - ***Properties:*** Opens up a new tab of the current selection, giving ways to edit the selection
+    - ***Name/Range*** Shows the name and allows the user to change it
+    - ***Position*** Gives the position of the current selection or group
+    - ***Group*** Changes what group the selection is in
+    - ***Stroke/Fill color*** Changes the color of the lines/fill of the selection block on the image.
+    - ***Width*** Changes the stroke width of the selection box.
+    - ***List coordinates*** Lists the coordinates
+  - ***Flatten:*** Creates a new RGB image that has the overlay rendered as pixel data.
+  - ***More>>:*** ETC.
+
+## Credits
+
+***Plugins:***
+
+GroupedZProjector written by ***Charlie Holly***
+
+PoorMan3DReg written by ***Michael Liebling [link](http://www.its.caltech.edu/~liebling/)***
+
+TurboReg written by ***Philippe Thevenaz [link](http://bigwww.epfl.ch/)***
+
+***Contributers:***
+
+***Matt Searfass, CJ Spagnolia, Nick Costley, Luke Halko, Jaden Stith, Emily Oldham, Sean McMann, Gia Bugieda, Akshat Katoch, Emma Adelmann, Sohan Gadiraju, Jonathan Zhang***
+
+
