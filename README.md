@@ -125,16 +125,13 @@ After running multi-measure, the peak analysis phase will begin. You will find t
   - ***Flatten:*** Creates a new RGB image that has the overlay rendered as pixel data.
   - ***More>>:*** ETC.
 ### Show Results
-<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/showresults.png" width="150" height="300">
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/showresults.png" width="100" height="150">
 
   - ***Set Measurements:*** 
-    - 
   - ***Show Results Table:*** 
-    - 
   - ***Save Results:*** 
     - Saves the results as a .csv file
   - ***Generate Charts:*** 
-    - 
 
 ## Credits
 
