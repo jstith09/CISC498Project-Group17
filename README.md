@@ -8,8 +8,7 @@ The target platform for this project is Windows 10. We have made it available fo
 2. Inside of the Fiji.app folder, navigate to plugins
 3. Move or copy the **CalciumSignal.jar** file into the folder 
 
-<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/installation.gif" width="750" height="200">
-
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/installation.gif" width="350" height="250">
 
 ## Startup & Usage
 After launching Fiji, navigate to File -> Open, and open image of choice. Then navigate to Plugins -> Calcium Signal -> Run Calcium Signal....
@@ -20,14 +19,7 @@ Allow a few moments for the image registration and edge detection to complete. T
 
 After running multi-measure, the peak analysis phase will begin. You will find the peak analysis outputs in Fiji.app/plugins/CalciumSignal/pythonscript/cell_data.
 
-### Menu
-
-<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/menu.png" width="150" height="250">
-
-  - ***Make A Copy:***
-    - Creates a new smaller image of the current selection and opens it. If nothing is selected, opens up the image to make a selection
-  - ***Registration:*** 
-    - Opens PoorMan3DReg to transform the stack for use 
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/welcome.png" width="350" height="150">
 
 ### PoorMan3DReg
 <img src="https://github.com/jstith09/calcium/blob/main/poorman.jpg" width="200" height="150">
@@ -49,15 +41,8 @@ After running multi-measure, the peak analysis phase will begin. You will find t
       - Uses the maximum value of the voxels
     - Sum Slices
       - Averages between the individual slices of voxels
-  - **Credits:**
-    - Displays the credits before opening the cell detector
  
-### Cell Detection
-<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/celldetection.png" width="200" height="150">
-
-  - ***Threshold Setting:***
-    - Opens the Cell Detector window
-
+### Cell Detector
 <img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/celldetector.jpg" width="200" height="200">
 
   - ***Threshold:*** Automatically will set to a number. Adjust so that the red is covering the most green that you would like detected in the image window
@@ -66,15 +51,6 @@ After running multi-measure, the peak analysis phase will begin. You will find t
     - Min and Max size of circles drawn. Can be left as is.
   - ***Exclude objects on edges:*** Checked (Default)
 
-  - ***Custom RoiManager:***
-    - Opens the Custom RoiManager
-  - ***ROI Manager:***
-    - Opens the ROI Manager
-  - ***Save ROI set as...:***
-    - Saves the current ROI set as a .roi file
-  - ***Import ROI set:***
-    - Imports a .roi file
-  - ***Apply ROI to video:***
 ## Windows
 
 ### Image Window
@@ -84,6 +60,9 @@ After running multi-measure, the peak analysis phase will begin. You will find t
   - Detected cells are circled in yellow (ROI)
   - Select the ROI by clicking on them
   - Selected ROI will appear in Roi Manager where you are able to add/delete/rename them
+
+
+***NEED TO IMPLEMENT/UPDATE PICTURE***
 
 ### Custom Roi Manager
 <img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/customroimanager.jpg">
@@ -131,31 +110,9 @@ After running multi-measure, the peak analysis phase will begin. You will find t
 
 GroupedZProjector written by ***Charlie Holly***
 
-TurboReg written by ***Philippe Thevenaz [link](http://bigwww.epfl.ch/)***
-
 PoorMan3DReg written by ***Michael Liebling [link](http://www.its.caltech.edu/~liebling/)***
 
-It is essentially a modification of Philippe Thévenaz's plugin StackReg.
-  The latter is based on the following paper:
-
- P. Thévenaz, U.E. Ruttimann, M. Unser
- A Pyramid Approach to Subpixel Registration Based on Intensity
- IEEE Transactions on Image Processing
- vol. 7, no. 1, pp. 27-41, January 1998.
-
- This paper is available on-line at
- [link](http://bigwww.epfl.ch/publications/thevenaz9801.html)
-
- Other relevant on-line publications are available at
- [link](http://bigwww.epfl.ch/publications/)
-
- Additional help available at
- [link](http://bigwww.epfl.ch/thevenaz/stackreg/)
-
- You'll be free to use this software for research purposes, but
- you should not redistribute it without our consent. In addition,
- we expect you to include a citation or acknowledgment whenever
- you present or publish results that are based on it.
+TurboReg written by ***Philippe Thevenaz [link](http://bigwww.epfl.ch/)***
 
 ***Contributers:***
 
