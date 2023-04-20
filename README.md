@@ -22,7 +22,7 @@ After running multi-measure, the peak analysis phase will begin. You will find t
 
 ### sMenu
 
-<img src="https://github.com/jstith09/calcium/blob/main/menu.png" width="150" height="250">
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/menu.png" width="150" height="250">
 
   - ***Make A Copy:***
     - Creates a new smaller image of the current selection and opens it. If nothing is selected, opens up the image to make a selection
@@ -59,11 +59,11 @@ After running multi-measure, the peak analysis phase will begin. You will find t
 
 <img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/celldetector.jpg" width="200" height="200">
 
-    - ***Threshold:*** Automatically will set to a number. Adjust so that the red is covering the most green that you would like detected in the image window
-    - ***Slice:*** Set to 1 (Default)
-    - ***Size Filter:*** Min: 10 Max: 262144 (Default)
-      - Min and Max size of circles drawn. Can be left as is.
-    - ***Exclude objects on edges:*** Checked (Default)
+  - ***Threshold:*** Automatically will set to a number. Adjust so that the red is covering the most green that you would like detected in the image window
+  - ***Slice:*** Set to 1 (Default)
+  - ***Size Filter:*** Min: 10 Max: 262144 (Default)
+    - Min and Max size of circles drawn. Can be left as is.
+  - ***Exclude objects on edges:*** Checked (Default)
 
   - ***Custom RoiManager:***
   - ***ROI Manager:***
