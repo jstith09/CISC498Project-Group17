@@ -8,7 +8,7 @@ The target platform for this project is Windows 10. We have made it available fo
 2. Inside of the Fiji.app folder, navigate to plugins
 3. Move or copy the **CalciumSignal.jar** file into the folder 
 
-<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/installation.gif" width="350" height="250">
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/installation.gif" width="500" height="250">
 
 ## Startup & Usage
 After launching Fiji, navigate to File -> Open, and open image of choice. Then navigate to Plugins -> Calcium Signal -> Run Calcium Signal....
