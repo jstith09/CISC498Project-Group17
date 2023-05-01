@@ -113,7 +113,7 @@ After running multi-measure, the peak analysis phase will begin. You will find t
   - ***Delete:*** Deletes the selected item from the list, if nothing is selected, will prompt the user if they wish to delete the entire list.
   - ***Rename:*** Prompts the user to rename the selected item in the list.
   - ***Measure:*** Upon clicking, brings up a new "Results" window, stating the number, mean, minimum, and maximum of the original selection on the image.
-<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/bc6c2b810fab817679cd3362378b3d71.png" width="150" height="150">
+
 
   - ***Deselect:*** Deselects the current selection in the group, clicking it while nothing is selected will do nothing.
   - ***Properties:*** Opens up a new tab of the current selection, giving ways to edit the selection
@@ -129,11 +129,26 @@ After running multi-measure, the peak analysis phase will begin. You will find t
 <img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/showresults.png" width="200" height="150">
 
   - ***Set Measurements:*** 
+    - Opens the set measurements menu which allows for toggleing of specific measurement tools, further help on this menu can be found through the Help button in the bottom right
+    - <img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/setmeasurements.png" width="150" height="200">
   - ***Show Results Table:*** 
+    - Opens the results table tab if closed
   - ***Save Results:*** 
     - Saves the results as a .csv file
   - ***Generate Charts:*** 
-    - Opens the menu for generating charts
+    - Opens the multimeasure menu, and further menus for measuring cells
+### Multimeasure
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/bc6c2b810fab817679cd3362378b3d71.png" width="150" height="150">
+
+### Cell Plotting
+<img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/cellplots.png" width="150" height="175">
+
+  - ***Open Cell:***
+    - Opens a specific cell's file, as well as the peak manager, for viewing and editing specific cells and peaks
+    - <img src="https://github.com/jstith09/CISC498Project-Group17/blob/main/cellmenu.png" width="150" height="150">
+  - ***Generate All Plots:***
+    - Opens plots from a saved file
+
 
 ## Credits
 
