@@ -75,6 +75,7 @@ After running multi-measure, the peak analysis phase will begin. You will find t
   - ***Import ROI set:***
     - Imports a .roi file
   - ***Apply ROI to video:***
+    - Applies the ROI set to a video file
 ## Windows
 
 ### Image Window
@@ -132,6 +133,7 @@ After running multi-measure, the peak analysis phase will begin. You will find t
   - ***Save Results:*** 
     - Saves the results as a .csv file
   - ***Generate Charts:*** 
+    - Opens the menu for generating charts
 
 ## Credits
 
